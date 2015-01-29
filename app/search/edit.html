@@ -1,0 +1,22 @@
+<form ng-submit="save()">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" data-ng-model="person.name" id="name">
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="text" data-ng-model="person.phone" id="phone">
+    </div>
+    <fieldset>
+        <legend>Address:</legend>
+        <address style="margin-left: 50px">
+            <input type="text" data-ng-model="person.address.street"><br/>
+            <input type="text" data-ng-model="person.address.city">,
+            <input type="text" data-ng-model="person.address.state" size="2">
+            <input type="text" data-ng-model="person.address.zip" size="5">
+        </address>
+    </fieldset>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
