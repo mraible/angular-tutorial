@@ -2,3 +2,22 @@
     <input type="search" name="search" ng-model="term">
     <button>Search</button>
 </form>
+
+<table ng-show="searchResults.length" style="width: 100%">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in searchResults">
+        <td>{{person.name}}</td>
+        <td>{{person.phone}}</td>
+        <td>{{person.address.street}}<br/>
+            {{person.address.city}}, {{person.address.state}} {{person.address.zip}}
+        </td>
+    </tr>
+    </tbody>
+</table>
